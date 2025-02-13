@@ -14,11 +14,19 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+推荐使用 bun 启动
+如果还未下载 bun，请参考[https://bun.sh/docs/installation](https://bun.sh/docs/installation)
 
-You can start editing the page by modifying `app/Container.tsx`. The page auto-updates as you edit the file.
+## Introduce
+这是一个整合了`Nextjs15`、`Cesium` 的模板项目
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+需要注意的是，由于`turbopack`目前还未完全兼容`webpack`，因此在`cesium`项目中，
+需要取消`turbopack`启动，这一点已在`package.json`中配置好了，并且该模板用的是`React 19`，
+如果后期开发遇到版本冲突，可以考虑降版本至 18
+
+## Environment Variable
+在`.env`中添加`NEXT_PUBLIC_CESIUM_TOKEN`字段，并赋值你的Cesium Access Token，
+`Token`获取详见[https://ion.cesium.com/tokens?page=1](https://ion.cesium.com/tokens?page=1)
 
 ## Learn More
 
